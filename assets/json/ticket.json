@@ -1,0 +1,35 @@
+{
+    "list": [
+      {
+        "label": "Balcony",
+        "color": "#80A71A",
+        "key": 1,
+        "name":"Ticket1-创建时间睡觉睡觉十九世纪-100元",
+        "mapped":0,
+        "Capacity":0,
+        "price":100.00,
+        "color":"#FF0000"
+      },
+      {
+        "label": "Ground Floor",
+        "color": "#ED303D",
+        "key": 2,
+        "name":"Ticket2",
+        "mapped":0,
+        "Capacity":0,
+        "price":50.00,
+        "color":"#00ff00"
+      },
+      {
+        "label": "Wheelchair",
+        "color": "#3090ED",
+        "accessible": true,
+        "key": 3,
+        "name":"Ticket3",
+        "mapped":0,
+        "Capacity":0,
+        "price":10.00,
+        "color":"#0000ff"
+      }
+    ]
+}

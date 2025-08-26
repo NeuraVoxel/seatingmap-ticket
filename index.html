@@ -48,9 +48,48 @@
         // }
     </script>
 
+    <style>
+        .ticket-legend {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .ticket-legend ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .ticket-legend li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .ticket-legend .color-box {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            border-radius: 3px;
+        }
+        
+        .ticket-legend .legend-text {
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body style="margin: 0; padding: 0;">
+    <div id="legend" class="ticket-legend">
+        <ul id="legendList"></ul>
+    </div>
 
     <script src="./js/errorHandling.js"></script>
 
@@ -83,6 +122,26 @@
 
     <script>
         $(function () {
+            // 加载ticket.json数据并创建图例
+            $.getJSON('./assets/json/ticket.json', (data)=> {
+                console.log(data);
+
+                const legendList = $('#legendList');
+                
+                data.list.forEach(function(ticket) {
+                    const legendItem = $('<li>');
+                    const colorBox = $('<div>')
+                        .addClass('color-box')
+                        .css('background-color', ticket.color);
+                    const text = $('<span>')
+                        .addClass('legend-text')
+                        .text(ticket.name);
+                    
+                    legendItem.append(colorBox).append(text);
+                    legendList.append(legendItem);
+                });
+            });
+            
             initChartDesignerIframe('https://api-eu.seatsio.net', 'https://cdn-eu.seatsio.net', 'https://data.seatsio.net');
         });
     </script>
