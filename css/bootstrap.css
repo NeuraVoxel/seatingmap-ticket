@@ -1,0 +1,300 @@
+/*!
+ * Bootstrap v3.1.1 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+#chartDesignerWrapper article,
+#chartDesignerWrapper aside,
+#chartDesignerWrapper details,
+#chartDesignerWrapper figcaption,
+#chartDesignerWrapper figure,
+#chartDesignerWrapper footer,
+#chartDesignerWrapper header,
+#chartDesignerWrapper hgroup,
+#chartDesignerWrapper main,
+#chartDesignerWrapper nav,
+#chartDesignerWrapper section,
+#chartDesignerWrapper summary {
+  display: block;
+}
+#chartDesignerWrapper audio,
+#chartDesignerWrapper canvas,
+#chartDesignerWrapper progress,
+#chartDesignerWrapper video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+#chartDesignerWrapper audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+#chartDesignerWrapper [hidden],
+#chartDesignerWrapper template {
+  display: none;
+}
+#chartDesignerWrapper a {
+  background: transparent;
+}
+#chartDesignerWrapper a:active,
+#chartDesignerWrapper a:hover {
+  outline: 0;
+}
+#chartDesignerWrapper abbr[title] {
+  border-bottom: 1px dotted;
+}
+#chartDesignerWrapper b,
+#chartDesignerWrapper strong {
+  font-weight: bold;
+}
+#chartDesignerWrapper dfn {
+  font-style: italic;
+}
+#chartDesignerWrapper h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+}
+#chartDesignerWrapper mark {
+  color: #000;
+  background: #ff0;
+}
+#chartDesignerWrapper small {
+  font-size: 80%;
+}
+#chartDesignerWrapper sub,
+#chartDesignerWrapper sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+#chartDesignerWrapper sup {
+  top: -0.5em;
+}
+#chartDesignerWrapper sub {
+  bottom: -0.25em;
+}
+#chartDesignerWrapper img {
+  border: 0;
+}
+#chartDesignerWrapper svg:not(:root) {
+  overflow: hidden;
+}
+#chartDesignerWrapper figure {
+  margin: 1em 40px;
+}
+#chartDesignerWrapper hr {
+  height: 0;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+#chartDesignerWrapper pre {
+  overflow: auto;
+}
+#chartDesignerWrapper code,
+#chartDesignerWrapper kbd,
+#chartDesignerWrapper pre,
+#chartDesignerWrapper samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+#chartDesignerWrapper button,
+#chartDesignerWrapper input,
+#chartDesignerWrapper optgroup,
+#chartDesignerWrapper select,
+#chartDesignerWrapper textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+#chartDesignerWrapper button {
+  overflow: visible;
+}
+#chartDesignerWrapper button,
+#chartDesignerWrapper select {
+  text-transform: none;
+}
+#chartDesignerWrapper button,
+#chartDesignerWrapper input[type="button"],
+#chartDesignerWrapper input[type="reset"],
+#chartDesignerWrapper input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+#chartDesignerWrapper button[disabled],
+#chartDesignerWrapper input[disabled] {
+  cursor: default;
+}
+#chartDesignerWrapper button::-moz-focus-inner,
+#chartDesignerWrapper input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+#chartDesignerWrapper input {
+  line-height: normal;
+}
+#chartDesignerWrapper input[type="checkbox"],
+#chartDesignerWrapper input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+#chartDesignerWrapper input[type="number"]::-webkit-inner-spin-button,
+#chartDesignerWrapper input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+#chartDesignerWrapper input[type="search"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+#chartDesignerWrapper input[type="search"]::-webkit-search-cancel-button,
+#chartDesignerWrapper input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+#chartDesignerWrapper fieldset {
+  padding: 0.35em 0.625em 0.75em;
+  margin: 0 2px;
+  border: 1px solid #c0c0c0;
+}
+#chartDesignerWrapper legend {
+  padding: 0;
+  border: 0;
+}
+#chartDesignerWrapper textarea {
+  overflow: auto;
+}
+#chartDesignerWrapper optgroup {
+  font-weight: bold;
+}
+#chartDesignerWrapper table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+#chartDesignerWrapper td,
+#chartDesignerWrapper th {
+  padding: 0;
+}
+@media print {
+  #chartDesignerWrapper * {
+    color: #000 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  #chartDesignerWrapper a,
+  #chartDesignerWrapper a:visited {
+    text-decoration: underline;
+  }
+  #chartDesignerWrapper a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  #chartDesignerWrapper abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  #chartDesignerWrapper a[href^="javascript:"]:after,
+  #chartDesignerWrapper a[href^="#"]:after {
+    content: "";
+  }
+  #chartDesignerWrapper pre,
+  #chartDesignerWrapper blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  #chartDesignerWrapper thead {
+    display: table-header-group;
+  }
+  #chartDesignerWrapper tr,
+  #chartDesignerWrapper img {
+    page-break-inside: avoid;
+  }
+  #chartDesignerWrapper img {
+    max-width: 100% !important;
+  }
+  #chartDesignerWrapper p,
+  #chartDesignerWrapper h2,
+  #chartDesignerWrapper h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  #chartDesignerWrapper h2,
+  #chartDesignerWrapper h3 {
+    page-break-after: avoid;
+  }
+  #chartDesignerWrapper select {
+    background: #fff !important;
+  }
+  #chartDesignerWrapper .navbar {
+    display: none;
+  }
+  #chartDesignerWrapper .table td,
+  #chartDesignerWrapper .table th {
+    background-color: #fff !important;
+  }
+  #chartDesignerWrapper .btn > .caret,
+  #chartDesignerWrapper .dropup > .btn > .caret {
+    border-top-color: #000 !important;
+  }
+  #chartDesignerWrapper .label {
+    border: 1px solid #000;
+  }
+  #chartDesignerWrapper .table {
+    border-collapse: collapse !important;
+  }
+  #chartDesignerWrapper .table-bordered th,
+  #chartDesignerWrapper .table-bordered td {
+    border: 1px solid #ddd !important;
+  }
+}
+#chartDesignerWrapper * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#chartDesignerWrapper *:before,
+#chartDesignerWrapper *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#chartDesignerWrapper input,
+#chartDesignerWrapper button,
+#chartDesignerWrapper select,
+#chartDesignerWrapper textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+#chartDesignerWrapper a {
+  color: #428bca;
+  text-decoration: none;
+}
+#chartDesignerWrapper a:hover,
+#chartDesignerWrapper a:focus {
+  color: #2a6496;
+  text-decoration: underline;
+}
+#chartDesignerWrapper a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+#chartDesignerWrapper figure {
+  margin: 0;
+}
+#chartDesignerWrapper img {
+  vertical-align: middle;
+}

@@ -1,0 +1,80 @@
+#chartDesignerWrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+#chartDesignerWrapper .label.published {
+  background-color: #88aa00;
+}
+#chartDesignerWrapper .label.draft {
+  background-color: #AEAEAE;
+}
+#chartDesignerWrapper svg {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#chartDesignerWrapper svg image {
+  pointer-events: none;
+}
+#chartDesignerWrapper .chartdesigner {
+  height: 100%;
+}
+#chartDesignerWrapper #alert {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  color: white;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  cursor: pointer;
+  border-bottom: 2px solid white;
+}
+#chartDesignerWrapper #alert.notification {
+  background-color: #88aa00;
+}
+#chartDesignerWrapper #alert.warning {
+  background-color: #f4a129;
+}
+#chartDesignerWrapper #alert.keep-visible #ok-got-it-btn {
+  margin-left: 0.5em;
+}
+#chartDesignerWrapper #alert.keep-visible .dismiss-alert {
+  display: none;
+}
+#chartDesignerWrapper #alert.auto-hide #ok-got-it-btn {
+  display: none;
+}
+#chartDesignerWrapper #alert.auto-hide .dismiss-alert {
+  display: inline-block;
+  width: 4%;
+}
+#chartDesignerWrapper #alert .message {
+  display: inline-block;
+  width: 95%;
+}
+
+.rounded-rectangle {
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: #9CB0B8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.rounded-rectangle:hover {
+  background-color: #6B8E9C;
+}
+
+.rounded-rectangle:active {
+  background-color: #4A6B7D;
+}

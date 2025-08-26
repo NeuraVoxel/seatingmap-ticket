@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <script src="lib/jquery.1.11.0.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/fontfaceobserver.2.0.9.standalone.js"></script>
+    <script src="lib/less.1.7.0.min.js"></script>
+
+    <link rel="stylesheet" href="./css/flaticon/flaticon.css">
+    <link rel="stylesheet" href="./css/Roboto.css">
+    <link rel="stylesheet" href="./css/family.css">
+
+    <link rel="stylesheet" href="./css/font-seatsdesigner.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/chartDesigner.css">
+    <link rel="stylesheet" href="./css/gui.css">
+    <link rel="stylesheet" href="./css/DesignerApp.css">
+
+    <script src="./js/chart.js"></script>
+
+    <script>
+        let seatingMapJuzai = seatsio;
+    </script>
+
+    <script type="module">
+        import { ChartScannerComponent, Point, Polygon } from './js/chart-scanner/main.js';
+        window.ChartScannerComponent = ChartScannerComponent;
+        window.ChartScannerPoint = Point;
+        window.ChartScannerPolygon = Polygon;
+    </script>
+
+    <script src="./js/chartDesigner.js"></script>
+    <script src="./js/chartDesignerIframe.js"></script>
+
+    <script type="module">
+        // window.loadEditor3d = async () => {
+        //     if (window.Editor3D) {
+        //         return
+        //     }
+
+        //     return await import('../chart-editor-3d/main.js').then(module => {
+        //         window.Editor3D = module.Editor3D
+        //     })
+        // }
+    </script>
+
+</head>
+
+<body style="margin: 0; padding: 0;">
+
+    <script src="./js/errorHandling.js"></script>
+
+    <div id="chart"></div>
+    <div id="designerApp"></div>
+    <div id="editor3d"></div>
+    <div id="chartDesignerWrapper">
+        <form method="post" class="form-inline" id="chartForm">
+            <div id="alert">
+                <div class="message">
+                    <span class="msg-content"></span>
+                    <button id="ok-got-it-btn" class="btn btn-small btn-custom-transparent-whiteFg"><i
+                            class="fa fa-check"></i> &nbsp;<span class="translation-placeholder"
+                            data-placeholder="ok"></span></button>
+                </div>
+                <div class="dismiss-alert">
+                    <i class="fa fa-close dismiss-alert"></i>
+                </div>
+            </div>
+            <div class="chartdesigner svgContainer" id="drawing"></div>
+        </form>
+    </div>
+
+
+    <div id="renderingError">
+        <div>
+            <div class="message"></div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            initChartDesignerIframe('https://api-eu.seatsio.net', 'https://cdn-eu.seatsio.net', 'https://data.seatsio.net');
+        });
+    </script>
+
+</body>
+
+</html>

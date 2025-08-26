@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "Flaticon";
+    src: url("flaticon.eot");
+    src: url("flaticon.eot#iefix") format("embedded-opentype"), url("flaticon.woff") format("woff"), url("flaticon.ttf") format("truetype"), url("flaticon.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-family: Flaticon;
+    font-style: normal;
+}
+
+.flaticon-cinema34:before {
+    content: "\e000";
+}
+
+.flaticon-roundedcorners:before {
+    content: "\e001";
+}
+
+.flaticon-row:before {
+    content: "\e002";
+}
+
+.flaticon-ellipse:before {
+    content: "\e003";
+}
+
+.flaticon-flip-vertical:before {
+    content: "\e004";
+}
+
+.flaticon-flip-horizontal:before {
+    content: "\e005";
+}
+
+.flaticon-four89:before {
+    content: "\e006";
+}
+
+.flaticon-four92:before {
+    content: "\e007";
+}
+
+.flaticon-shapes-white:before {
+    content: "\e008";
+}
+
+.flaticon-shapes-black:before {
+    content: "\e009";
+}
+
+.flaticon-irregular10:before {
+    content: "\e00a";
+}
+
+.flaticon-line1:before {
+    content: "\e00b";
+}
+
+.flaticon-liquid12:before {
+    content: "\e00c";
+}
+
+.flaticon-more17:before {
+    content: "\e00d";
+}
+
+.flaticon-fillColor:before {
+    content: "\e00e";
+}
+
+.flaticon-lineColor:before {
+    content: "\e00f";
+}
+
+.flaticon-curve:before {
+    content: "\e010";
+}
+
+.flaticon-roundedrectangle:before {
+    content: "\e011";
+}
+
+.flaticon-rectangle1:before {
+    content: "\e012";
+}
+
+.flaticon-select:before {
+    content: "\e013";
+}
+
+.flaticon-table:before {
+    content: "\e014";
+}
+
+.flaticon-turn:before {
+    content: "\e015";
+}
+
+.flaticon-bullseye:before {
+    content: "\e016";
+}
+
+.flaticon-vector15:before {
+    content: "\e017";
+}
+
+.flaticon-circle:before {
+    content: "\e018";
+}
+
+.flaticon-straight-line:before {
+    content: "\e019";
+}
+
+.flaticon-curved-line:before {
+    content: "\e01a";
+}
