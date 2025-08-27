@@ -59631,7 +59631,7 @@ seatsio.ChartDesigner.prototype.clipboardUpdated = function (clipboard) {
 seatsio.ChartDesigner.prototype.retrieveChart = function () {
     var me = this;
    
-    fetch('assets/json/rawdata.json')
+    fetch('assets/json/design.json')
     .then(response => response.json())
     .then(data => {
       // this.loadDrawing(data);
@@ -66339,29 +66339,31 @@ seatsio.Chair.DEFAULT_DISPLAY_OBJECT_TYPE = 'seat'
 
 seatsio.Chair.prototype.getInspectorSheets = function () {
     const source = seatsio.Object.prototype.getInspectorSheets.call(this)
+
     const disabled = source.disabled || []
     if (this.disabledEditingBySafeMode()) {
         disabled.push('SeatLabeling.label')
     }
+    
     return Object.assign(source, {
         'Category.category': this.category && this.category.key,
-        'SeatLabeling.label': this.label,
-        'SeatLabeling.displayLabel': this.displayLabel,
-        'SeatLabeling.isNewObject': !this.published,
-        'SeatLabeling.displayObjectType': this.displayObjectType,
-        'Seat.restrictedView': this.restrictedView,
-        'Seat.hearingImpaired': this.hearingImpaired,
-        'Seat.liftUpArmrests': this.liftUpArmrests,
-        'Seat.accessible': this.accessible,
-        'Seat.companionSeat': this.companionSeat,
-        'Seat.semiAmbulatorySeat': this.semiAmbulatorySeat,
-        'Seat.plusSize': this.plusSize,
-        'Seat.disabledBySocialDistancingRules': this.disabledBySocialDistancingRules,
-        'Seat.accessibleByCategory': this.isAccessibleByCategory(),
-        'ViewFromSeat.type': 'chair',
-        'ViewFromSeat.url': seatsio.Object.viewFromSeatsUrl(this.designer, this.viewFromYourSeatImage),
-        'Misc.entrance': this.entrance,
-        'Misc.sectionEntrance': this.getSectionEntrance(),
+        // 'SeatLabeling.label': this.label,
+        // 'SeatLabeling.displayLabel': this.displayLabel,
+        // 'SeatLabeling.isNewObject': !this.published,
+        // 'SeatLabeling.displayObjectType': this.displayObjectType,
+        // 'Seat.restrictedView': this.restrictedView,
+        // 'Seat.hearingImpaired': this.hearingImpaired,
+        // 'Seat.liftUpArmrests': this.liftUpArmrests,
+        // 'Seat.accessible': this.accessible,
+        // 'Seat.companionSeat': this.companionSeat,
+        // 'Seat.semiAmbulatorySeat': this.semiAmbulatorySeat,
+        // 'Seat.plusSize': this.plusSize,
+        // 'Seat.disabledBySocialDistancingRules': this.disabledBySocialDistancingRules,
+        // 'Seat.accessibleByCategory': this.isAccessibleByCategory(),
+        // 'ViewFromSeat.type': 'chair',
+        // 'ViewFromSeat.url': seatsio.Object.viewFromSeatsUrl(this.designer, this.viewFromYourSeatImage),
+        // 'Misc.entrance': this.entrance,
+        // 'Misc.sectionEntrance': this.getSectionEntrance(),
         disabled
     })
 }
@@ -67451,6 +67453,8 @@ seatsio.Row.prototype.getInspectorSheets = function () {
     let source = {
         'Category.category': this.getChairsCategoryKeys()
     }
+    return source ;
+
     if (this.isMultiSegmentRow()) {
         Object.assign(source, {
             'Row.smooth': this.smooth,
@@ -79608,6 +79612,9 @@ seatsio.Category = function (label, color, accessible, key) {
     this.color = color
     this.accessible = accessible
     this.key = key
+    this.mapped = 0;
+    this.capacity = 0;
+    this.price = 0;
 }
 
 seatsio.Category.getLabel = function (category) {

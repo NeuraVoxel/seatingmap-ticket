@@ -135,7 +135,7 @@
                         .css('background-color', ticket.color);
                     const text = $('<span>')
                         .addClass('legend-text')
-                        .text(ticket.name);
+                        .text(`${ticket.label}- Price: ${ticket.price}` );
                     
                     legendItem.append(colorBox).append(text);
                     legendList.append(legendItem);

@@ -3,70 +3,65 @@
       {
         "label": "Ticket1-创建时间睡觉睡觉十九世纪-100元",
         "color":"#16a085",
-        "key": 1,
-        "name":"Ticket1-创建时间睡觉睡觉十九世纪-100元",
+        "key": 1, 
+        "accessible": false,
         "mapped":0,
         "Capacity":0,
-        "price":100.00
+        "price":100
       },
       {
         "label": "Ground Floor",
         "color":"#ffa502",
         "key": 2,
-        "name":"Ground Floor",
+        "accessible": false,
         "mapped":0,
         "Capacity":0,
-        "price":50.00
+         "price":200
       },
       {
         "label": "Wheelchair",
         "color":"#0097e6",
         "accessible": true,
         "key": 3,
-        "name":"Ticket3",
         "mapped":0,
-        "Capacity":0,
-        "price":10.00
+         "Capacity":0,
+         "price":300
       },
       {
         "label": "General Admission",
         "color":"#8c7ae6",
         "accessible": true,
         "key": 4,
-        "name":"General Admission",
         "mapped":0,
-        "Capacity":0,
-        "price":10.00
+         "Capacity":0,
+         "price":10
       },
       {
         "label": "Paid",
         "color":"#e1b12c",
         "accessible": true,
         "key": 5,
-        "name":"Paid",
         "mapped":0,
-        "Capacity":0,
-        "price":20.00
+         "Capacity":0,
+         "price":20
       },
       {
         "label": "Child Free",
         "color":"#44bd32",
         "accessible": true,
         "key": 6,
-        "name":"Child Free",
         "mapped":0,
-        "Capacity":0,
-        "price":20.00
+         "Capacity":0,
+         "price":30
       },
       {
         "label": "Flexible pricing",
         "color":"#40739e",
         "accessible": true,
-        "key": 6,
-        "name":"Flexible pricing",
+        "key": 7,
         "mapped":0,
-        "Capacity":0,
-        "price":20.00
+         "Capacity":0,
+         "price":0
       }
     ]
 }

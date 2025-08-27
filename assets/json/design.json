@@ -5,20 +5,67 @@
   "categories": {
     "list": [
       {
-        "label": "Balcony",
-        "color": "#80A71A",
-        "key": 1
+        "label": "Ticket1-创建时间睡觉睡觉十九世纪-100元",
+        "color":"#16a085",
+        "key": 1, 
+        "accessible": false,
+        "mapped":0,
+        "Capacity":0,
+        "price":100
       },
       {
         "label": "Ground Floor",
-        "color": "#ED303D",
-        "key": 2
+        "color":"#ffa502",
+        "key": 2,
+        "accessible": false,
+        "mapped":0,
+        "Capacity":0,
+         "price":200
       },
       {
         "label": "Wheelchair",
-        "color": "#3090ED",
+        "color":"#0097e6",
         "accessible": true,
-        "key": 3
+        "key": 3,
+        "mapped":0,
+         "Capacity":0,
+         "price":300
+      },
+      {
+        "label": "General Admission",
+        "color":"#8c7ae6",
+        "accessible": true,
+        "key": 4,
+        "mapped":0,
+         "Capacity":0,
+         "price":10
+      },
+      {
+        "label": "Paid",
+        "color":"#e1b12c",
+        "accessible": true,
+        "key": 5,
+        "mapped":0,
+         "Capacity":0,
+         "price":20
+      },
+      {
+        "label": "Child Free",
+        "color":"#44bd32",
+        "accessible": true,
+        "key": 6,
+        "mapped":0,
+         "Capacity":0,
+         "price":30
+      },
+      {
+        "label": "Flexible pricing",
+        "color":"#40739e",
+        "accessible": true,
+        "key": 7,
+        "mapped":0,
+         "Capacity":0,
+         "price":0
       }
     ],
     "maxCategoryKey": 6
