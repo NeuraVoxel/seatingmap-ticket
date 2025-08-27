@@ -59631,7 +59631,7 @@ seatsio.ChartDesigner.prototype.clipboardUpdated = function (clipboard) {
 seatsio.ChartDesigner.prototype.retrieveChart = function () {
     var me = this;
    
-    fetch('assets/json/design.json')
+    fetch('assets/json/rawdata.json')
     .then(response => response.json())
     .then(data => {
       // this.loadDrawing(data);
@@ -66344,7 +66344,7 @@ seatsio.Chair.prototype.getInspectorSheets = function () {
     if (this.disabledEditingBySafeMode()) {
         disabled.push('SeatLabeling.label')
     }
-    
+
     return Object.assign(source, {
         'Category.category': this.category && this.category.key,
         // 'SeatLabeling.label': this.label,
@@ -88116,11 +88116,11 @@ class DesignerApp extends React.Component {
                     React.createElement(
                         'div',
                         { className: 'panel-row grow' },
-                        // React.createElement(
-                        //     Panel,
-                        //     { snap: 'left' },
-                        //     React.createElement(ToolPicker, { designer: this.props.designer, disableTooltips: displayTutorial })
-                        // ),
+                        React.createElement(
+                            Panel,
+                            { snap: 'left' },
+                            React.createElement(ToolPicker, { designer: this.props.designer, disableTooltips: displayTutorial })
+                        ),
                         React.createElement(CanvasGrabber, {
                             enabled: this.props.designer.enableCanvasGrabber,
                             spacebarIsPressed: this.props.designer.spacebarIsPressed
@@ -96382,26 +96382,26 @@ class ToolPicker extends React.Component {
             // 'select-brush': ['selectBrush', 'select-brush', 'toolSelectBrush'],
             // 'select-sameType': ['selectSameType', 'select-sameType', 'toolSelectSameType'],
             // 'node': [seatsio.Features.Type.NODES, 'node', 'toolNode'],
-            'row-single': [seatsio.Features.Type.ROWS, 'row-single', 'toolRowSingle'],
+            // 'row-single': [seatsio.Features.Type.ROWS, 'row-single', 'toolRowSingle'],
             // 'row-segmented': [seatsio.Features.Type.ROWS, 'row-segmented', 'toolRowSegmented'],
-            'row-multiple': [seatsio.Features.Type.ROWS, 'row-multiple', 'toolRowMultiple'],
-            'section-polygon': [seatsio.Features.Type.SECTIONS, 'section-polygon', 'toolSection'],
-            'section-rectangle': [seatsio.Features.Type.SECTIONS, 'section-rectangle', 'toolSection'],
+            // 'row-multiple': [seatsio.Features.Type.ROWS, 'row-multiple', 'toolRowMultiple'],
+            // 'section-polygon': [seatsio.Features.Type.SECTIONS, 'section-polygon', 'toolSection'],
+            // 'section-rectangle': [seatsio.Features.Type.SECTIONS, 'section-rectangle', 'toolSection'],
             // 'booth': [seatsio.Features.Type.BOOTHS, 'booth', 'toolBooth'],
-            'ga-rectangle': [seatsio.Features.Type.AREAS, 'ga-rectangle', 'toolGaRectangle'],
-            'ga-ellipse': [seatsio.Features.Type.AREAS, 'ga-ellipse', 'toolGaEllipse'],
-            'ga-polygon': [seatsio.Features.Type.AREAS, 'ga-polygon', 'toolGaPolygon'],
-            'shape-rectangle': [seatsio.Features.Type.SHAPES, 'shape-rectangle', 'toolShapeRectangle'],
-            'shape-ellipse': [seatsio.Features.Type.SHAPES, 'shape-ellipse', 'toolShapeEllipse'],
-            'shape-polygon': [seatsio.Features.Type.SHAPES, 'shape-polygon', 'toolShapePolygon'],
-            'line': [seatsio.Features.Type.SHAPES, 'line', 'toolLine'],
+            // 'ga-rectangle': [seatsio.Features.Type.AREAS, 'ga-rectangle', 'toolGaRectangle'],
+            // 'ga-ellipse': [seatsio.Features.Type.AREAS, 'ga-ellipse', 'toolGaEllipse'],
+            // 'ga-polygon': [seatsio.Features.Type.AREAS, 'ga-polygon', 'toolGaPolygon'],
+            // 'shape-rectangle': [seatsio.Features.Type.SHAPES, 'shape-rectangle', 'toolShapeRectangle'],
+            // 'shape-ellipse': [seatsio.Features.Type.SHAPES, 'shape-ellipse', 'toolShapeEllipse'],
+            // 'shape-polygon': [seatsio.Features.Type.SHAPES, 'shape-polygon', 'toolShapePolygon'],
+            // 'line': [seatsio.Features.Type.SHAPES, 'line', 'toolLine'],
             // 'table-round': [seatsio.Features.Type.TABLES, 'table-round', 'toolTableRound'],
             // 'table-rectangle': [seatsio.Features.Type.TABLES, 'table-rectangle', 'toolTableRectangle'],
-            'text': [seatsio.Features.Type.TEXTS, 'text', 'toolText'],
+            // 'text': [seatsio.Features.Type.TEXTS, 'text', 'toolText'],
             // 'image': [seatsio.Features.Type.IMAGES, 'image', 'toolImageObject'],
             // 'focalpoint': [seatsio.Features.Type.FOCAL_POINT, 'focalpoint', 'toolFocalPoint'],
             // 'icon': [seatsio.Features.Type.ICONS, 'icon', 'toolIcon'],
-            'hand': [seatsio.Features.Type.HAND, 'hand', 'toolHand']
+            // 'hand': [seatsio.Features.Type.HAND, 'hand', 'toolHand']
         };
 
         this.handleClickOutside = this.handleClickOutside.bind(this);
