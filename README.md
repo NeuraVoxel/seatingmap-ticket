@@ -2,3 +2,5 @@
 seatingmap-ticket
 
 https://neuravoxel.cn/seatingmap-ticket/
+
+getInspectorSheets

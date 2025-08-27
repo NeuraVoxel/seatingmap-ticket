@@ -78677,22 +78677,22 @@ seatsio.Booth.prototype.getInspectorSheets = function () {
     }
     return Object.assign(source, {
         'Category.category': this.category && this.category.key,
-        'Shape.width': this.width,
-        'Shape.height': this.height,
-        'Shape.rotation': Math.round(this.rotationAngle),
-        'Transform': null,
-        'Transform.cutoffAngle': null,
-        'SectionLabeling.sectionLabel': this.sectionLabel,
-        'SectionLabeling.sectionDisplayedLabel': this.sectionDisplayedLabel,
-        'SectionLabeling.isNewObject': !this.published,
-        'ObjectLabeling.label': this.hasLabel() ? this.label : null,
-        'ObjectLabeling.displayLabel': this.displayLabel,
-        'ObjectLabeling.isNewObject': !this.published,
-        'ObjectLabeling.sequence': this.objectLabeling.algoName,
-        'ObjectLabeling.prefix': this.objectLabeling.prefix,
-        'ObjectLabeling.start': this.objectLabeling.startAtIndex + 1,
-        'Misc.entrance': this.entrance,
-        'Misc.sectionEntrance': this.getSectionEntrance(),
+        // 'Shape.width': this.width,
+        // 'Shape.height': this.height,
+        // 'Shape.rotation': Math.round(this.rotationAngle),
+        // 'Transform': null,
+        // 'Transform.cutoffAngle': null,
+        // 'SectionLabeling.sectionLabel': this.sectionLabel,
+        // 'SectionLabeling.sectionDisplayedLabel': this.sectionDisplayedLabel,
+        // 'SectionLabeling.isNewObject': !this.published,
+        // 'ObjectLabeling.label': this.hasLabel() ? this.label : null,
+        // 'ObjectLabeling.displayLabel': this.displayLabel,
+        // 'ObjectLabeling.isNewObject': !this.published,
+        // 'ObjectLabeling.sequence': this.objectLabeling.algoName,
+        // 'ObjectLabeling.prefix': this.objectLabeling.prefix,
+        // 'ObjectLabeling.start': this.objectLabeling.startAtIndex + 1,
+        // 'Misc.entrance': this.entrance,
+        // 'Misc.sectionEntrance': this.getSectionEntrance(),
         disabled
     })
 }
@@ -83265,26 +83265,26 @@ seatsio.GeneralAdmissionArea.prototype.getInspectorSheets = function () {
         : {}
     let properties = Object.assign({}, source)
     properties = Object.assign(source, {
-        ...this.getShapeAndTransformInspectorSheets(),
-        'ObjectLabeling.label': this.label,
-        'ObjectLabeling.displayLabel': this.displayLabel,
-        'ObjectLabeling.isNewObject': !this.published,
-        'ObjectLabeling.sequence': this.objectLabeling.algoName,
-        'ObjectLabeling.prefix': this.objectLabeling.prefix,
-        'ObjectLabeling.start': this.objectLabeling.startAtIndex + 1,
-        ...nonJoinedProperties,
-        'Capacity.bookAsAWhole': this.bookAsAWhole,
-        'Capacity.variableOccupancy': this.variableOccupancy,
-        'Capacity.capacity': this.capacity,
-        'Capacity.minOccupancy': this.minOccupancy,
-        'ViewFromSeat.url': this.viewFromSeatsUrl(),
-        'Misc.entrance': this.entrance,
-        'Misc.sectionEntrance': this.getSectionEntrance(),
+        // ...this.getShapeAndTransformInspectorSheets(),
+        // 'ObjectLabeling.label': this.label,
+        // 'ObjectLabeling.displayLabel': this.displayLabel,
+        // 'ObjectLabeling.isNewObject': !this.published,
+        // 'ObjectLabeling.sequence': this.objectLabeling.algoName,
+        // 'ObjectLabeling.prefix': this.objectLabeling.prefix,
+        // 'ObjectLabeling.start': this.objectLabeling.startAtIndex + 1,
+        // ...nonJoinedProperties,
+        // 'Capacity.bookAsAWhole': this.bookAsAWhole,
+        // 'Capacity.variableOccupancy': this.variableOccupancy,
+        // 'Capacity.capacity': this.capacity,
+        // 'Capacity.minOccupancy': this.minOccupancy,
+        // 'ViewFromSeat.url': this.viewFromSeatsUrl(),
+        // 'Misc.entrance': this.entrance,
+        // 'Misc.sectionEntrance': this.getSectionEntrance(),
         disabled
     })
     return Object.assign({
         'Category.category': this.category && this.category.key,
-        'Zone.zone': this.zone
+        // 'Zone.zone': this.zone
     }, properties)
 }
 
