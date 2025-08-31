@@ -59673,7 +59673,7 @@ seatsio.ChartDesigner.prototype.retrieveDrawing = function () {
     }
 
     if (this.openDraftDrawing) {
-        return this.v2Client.retrieveDraftDrawing(this.chartKey)
+        return this.v2Client.retrieveDraftDrawing(this.chartKey)  
             .then(function (drawing) {
                 me.renderDrawing(drawing)
             })
@@ -74673,11 +74673,11 @@ seatsio.Saver.prototype.createDeflater = function () {
 }
 
 seatsio.Saver.prototype.save = function (drawing) {
-    // if (this.chartDesigner.isReadOnly()) {
-    //     this.chartDesigner.uiEvents.saveRejected()
-    //     return
-    // }
-    console.log(drawing);
+    if (this.chartDesigner.isReadOnly()) {
+        this.chartDesigner.uiEvents.saveRejected()
+        return
+    }
+    // console.log(drawing);
     this.showSavingFeedback()
     this.deferred = $.Deferred()
     this.deflater.postMessage(drawing)
